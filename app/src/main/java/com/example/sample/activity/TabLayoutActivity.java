@@ -18,7 +18,7 @@ import com.jaeger.library.StatusBarUtil;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends BaseActivity {
+public class TabLayoutActivity extends BaseActivity {
 
     @Bind(R.id.toolbar)
     Toolbar toolbar;

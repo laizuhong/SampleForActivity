@@ -2,9 +2,11 @@ package com.example.sample.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import com.example.sample.R;
 import com.example.sample.adapter.PagerAdapter;
@@ -19,7 +21,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- *
  * Created by 赖祖宏 on 2017/5/15.
  */
 
@@ -28,6 +29,10 @@ public class TabHostActivity extends AppCompatActivity {
     BottomNavigationView navigationView;
     @Bind(R.id.viewPager)
     ViewPager viewPager;
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+    @Bind(R.id.appbar)
+    AppBarLayout appbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,7 +40,8 @@ public class TabHostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_taghost);
         ButterKnife.bind(this);
 
-        List<Fragment> fragments=new ArrayList<>();
+        setSupportActionBar(toolbar);
+        List<Fragment> fragments = new ArrayList<>();
         fragments.add(new MainFragment());
         fragments.add(new MainFragment());
         fragments.add(new MainFragment());

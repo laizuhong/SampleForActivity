@@ -46,14 +46,22 @@ public class HomeActivity extends AppCompatActivity {
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 switch (position) {
                     case 0:
-                        startActivity(new Intent(HomeActivity.this,MainActivity.class));
+                        startActivity(new Intent(HomeActivity.this,TabLayoutActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(HomeActivity.this,TabHostActivity.class));
                         break;
+                    case 2:
+                        startActivity(new Intent(HomeActivity.this,ViewPagerActivity.class));
+                        break;
+                    default:
+                        adapter.notifyItemRemoved(position);
+                        adapter.notifyItemRangeChanged(position,adapter.getData().size()-position);
+                        break;
                 }
             }
         });
+
     }
 
 

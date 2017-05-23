@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BottomNavigationViewLibrary/BottomNavigationViewLibrary.iml" filepath="$PROJECT_DIR$/BottomNavigationViewLibrary/BottomNavigationViewLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sample.iml" filepath="$PROJECT_DIR$/Sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SampleForActivity.iml" filepath="$PROJECT_DIR$/SampleForActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/ToolbarLibrary/ToolbarLibrary.iml" filepath="$PROJECT_DIR$/ToolbarLibrary/ToolbarLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
