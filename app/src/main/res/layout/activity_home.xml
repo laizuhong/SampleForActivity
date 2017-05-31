@@ -38,7 +38,7 @@
 
     
     <LinearLayout
-        android:background="@color/cardview_dark_background"
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="bottom"
