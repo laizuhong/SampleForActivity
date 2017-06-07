@@ -57,6 +57,9 @@ public class HomeActivity extends AppCompatActivity {
                     case 3:
                         startActivity(new Intent(HomeActivity.this,ImageActivity.class));
                         break;
+                    case 4:
+                        startActivity(new Intent(HomeActivity.this,BottomBehaviorActivity.class));
+                        break;
                     default:
                         adapter.notifyItemRemoved(position);
                         adapter.notifyItemRangeChanged(position,adapter.getData().size()-position);
