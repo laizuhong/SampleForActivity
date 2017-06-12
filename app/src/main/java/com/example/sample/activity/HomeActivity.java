@@ -60,6 +60,9 @@ public class HomeActivity extends AppCompatActivity {
                     case 4:
                         startActivity(new Intent(HomeActivity.this,BottomBehaviorActivity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(HomeActivity.this,RecyclerViewActivity.class));
+                        break;
                     default:
                         adapter.notifyItemRemoved(position);
                         adapter.notifyItemRangeChanged(position,adapter.getData().size()-position);

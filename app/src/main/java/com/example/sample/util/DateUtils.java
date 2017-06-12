@@ -19,12 +19,12 @@ public class DateUtils {
     public static List<BookBean> getDate(){
 
         List<BookBean> list=new ArrayList<>();
-        list.add(new BookBean("asdf","234"));
-        list.add(new BookBean("asddf","234"));
-        list.add(new BookBean("asadf","234"));
-        list.add(new BookBean("ascvdf","234"));
-        list.add(new BookBean("asfdf","234"));
-        list.add(new BookBean("asbbdf","234"));
+        list.add(new BookBean("TabLayoutActivity","234"));
+        list.add(new BookBean("TabHostActivity","234"));
+        list.add(new BookBean("ViewPagerActivity","234"));
+        list.add(new BookBean("ImageActivity","234"));
+        list.add(new BookBean("BottomBehaviorActivity","234"));
+        list.add(new BookBean("RecyclerViewActivity","234"));
         list.add(new BookBean("assdf","234"));
         list.add(new BookBean("asddff","234"));
         list.add(new BookBean("asfgdf","234"));
