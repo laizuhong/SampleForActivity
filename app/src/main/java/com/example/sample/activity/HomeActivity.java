@@ -14,6 +14,7 @@ import com.example.sample.R;
 import com.example.sample.adapter.MainAdapter;
 import com.example.sample.bean.BookBean;
 import com.example.sample.util.DateUtils;
+import com.thefinestartist.finestwebview.FinestWebView;
 
 import java.util.List;
 
@@ -62,6 +63,12 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case 5:
                         startActivity(new Intent(HomeActivity.this,RecyclerViewActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(HomeActivity.this,WebViewActivity.class));
+                        break;
+                    case 7:
+                        new FinestWebView.Builder(HomeActivity.this).show("https://www.fntv8.com/m/live/128542");
                         break;
                     default:
                         adapter.notifyItemRemoved(position);
