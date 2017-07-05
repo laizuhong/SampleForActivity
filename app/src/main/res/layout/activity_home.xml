@@ -38,7 +38,7 @@
 
     
     <LinearLayout
-        android:background="@color/colorAccent"
+        android:background="@color/colorActive"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="bottom"

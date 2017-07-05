@@ -1,1 +1,1 @@
-include ':app', ':library', ':BottomNavigationViewLibrary', ':ToolbarLibrary'
+include ':app', ':library', ':BottomNavigationViewLibrary', ':ToolbarLibrary', ':ijkplayer-arm64',":ijkplayer-armv5",":ijkplayer-armv7a",":ijkplayer-exo",":ijkplayer-java",":ijkplayer-x86",":ijkplayer-x86_64"

@@ -32,6 +32,8 @@ public class HomeActivity extends AppCompatActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
+    MainAdapter adapter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,7 @@ public class HomeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         list= DateUtils.getDate();
-        MainAdapter adapter = new MainAdapter(list);
+        adapter = new MainAdapter(list);
         rvContent.setLayoutManager(new LinearLayoutManager(this));
         rvContent.setAdapter(adapter);
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
@@ -69,6 +71,15 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case 7:
                         new FinestWebView.Builder(HomeActivity.this).show("https://www.fntv8.com/m/live/128542");
+                        break;
+                    case 8:
+                        startActivity(new Intent(HomeActivity.this,VideoActivity.class));
+                        break;
+                    case 9:
+                        startActivity(new Intent(HomeActivity.this,UuidActivity.class));
+                        break;
+                    case 10:
+                        startActivity(new Intent(HomeActivity.this,HotFixActivity.class));
                         break;
                     default:
                         adapter.notifyItemRemoved(position);
