@@ -29,4 +29,12 @@ public class BookBean {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "BookBean{" +
+                "name='" + name + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
 }

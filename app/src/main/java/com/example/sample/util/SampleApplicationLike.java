@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.interfaces.BetaPatchListener;
+import com.tencent.bugly.beta.tinker.TinkerManager;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
 
 import java.util.Locale;
@@ -25,6 +26,20 @@ import java.util.Locale;
  */
 public class SampleApplicationLike extends DefaultApplicationLike {
 
+    public static SampleApplicationLike sInstance;
+
+    public static SampleApplicationLike getInstance() {
+        if (sInstance == null) {
+            synchronized (SampleApplicationLike.class) {
+                if (sInstance == null) {
+                    sInstance = (SampleApplicationLike) TinkerManager.getTinkerApplicationLike();
+
+                }
+            }
+        }
+        return sInstance;
+    }
+
     public static final String TAG = "Tinker.SampleApplicationLike";
 
     public SampleApplicationLike(Application application, int tinkerFlags,
@@ -38,6 +53,7 @@ public class SampleApplicationLike extends DefaultApplicationLike {
     @Override
     public void onCreate() {
         super.onCreate();
+        sInstance= (SampleApplicationLike) TinkerManager.getTinkerApplicationLike();
         // 设置是否开启热更新能力，默认为true
         Beta.enableHotfix = true;
         // 设置是否自动下载补丁，默认为true

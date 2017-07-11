@@ -68,4 +68,10 @@
     <string name="VideoView_player_AndroidMediaPlayer">Player: AndroidMediaPlayer</string>
     <string name="VideoView_player_IjkMediaPlayer">Player: IjkMediaPlayer</string>
     <string name="VideoView_player_IjkExoMediaPlayer">Player: IjkExoMediaPlayer</string>
+
+
+    <string name="hot_text1">textView</string>
+    <string name="hot_text2">button</string>
+    <string name="hot_text3">这是个textView</string>
+    <string name="hot_text4">这是个button</string>
 </resources>

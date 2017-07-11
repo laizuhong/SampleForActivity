@@ -16,6 +16,7 @@ public class HotFixActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 //                Toast.makeText(HotFixActivity.this,"HotFixActivity",Toast.LENGTH_LONG).show();
                 Toast.makeText(HotFixActivity.this,"HotFixActivity has fixed",Toast.LENGTH_LONG).show();
             }
