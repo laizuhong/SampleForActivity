@@ -10,7 +10,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/BottomNavigationViewLibrary" />
-            <option value="$PROJECT_DIR$/ToolbarLibrary" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/ijkplayer-arm64" />
             <option value="$PROJECT_DIR$/ijkplayer-armv5" />

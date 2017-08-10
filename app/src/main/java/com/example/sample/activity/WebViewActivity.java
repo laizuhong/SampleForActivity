@@ -2,7 +2,6 @@ package com.example.sample.activity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -11,7 +10,7 @@ import android.webkit.WebViewClient;
 
 import com.example.sample.R;
 
-public class WebViewActivity extends AppCompatActivity {
+public class WebViewActivity extends BaseActivity {
     WebView webView;
     View mCustomView;
     @Override

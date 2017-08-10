@@ -13,7 +13,6 @@ import com.example.sample.R;
 import com.example.sample.adapter.PagerAdapter;
 import com.example.sample.util.DateUtils;
 import com.example.sample.view.WrapContentHeightViewPager;
-import com.jaeger.library.StatusBarUtil;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -77,7 +76,7 @@ public class TabLayoutActivity extends BaseActivity {
     @Override
     protected void setStatusBar() {
         super.setStatusBar();
-        StatusBarUtil.setTranslucentForImageView(this, collapsingToolbarLayout);
+//        StatusBarUtil.setTranslucentForImageView(this, collapsingToolbarLayout);
     }
 
     @Override

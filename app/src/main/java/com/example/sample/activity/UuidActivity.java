@@ -2,14 +2,13 @@ package com.example.sample.activity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.sample.R;
 
 import java.util.UUID;
 
-public class UuidActivity extends AppCompatActivity {
+public class UuidActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

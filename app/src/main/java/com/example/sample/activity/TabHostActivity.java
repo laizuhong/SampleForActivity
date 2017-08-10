@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.example.sample.R;
@@ -24,7 +23,7 @@ import butterknife.ButterKnife;
  * Created by 赖祖宏 on 2017/5/15.
  */
 
-public class TabHostActivity extends AppCompatActivity {
+public class TabHostActivity extends BaseActivity {
     @Bind(R.id.navigationView)
     BottomNavigationView navigationView;
     @Bind(R.id.viewPager)

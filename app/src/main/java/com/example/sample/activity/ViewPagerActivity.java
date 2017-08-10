@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -23,7 +22,7 @@ import butterknife.ButterKnife;
  * 描述:
  */
 
-public class ViewPagerActivity extends AppCompatActivity {
+public class ViewPagerActivity extends BaseActivity {
     @Bind(R.id.buttonView)
     BottomNavigationView buttonView;
 //    @Bind(R.id.viewPager)

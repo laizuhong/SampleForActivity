@@ -3,7 +3,6 @@ package com.example.sample.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -25,7 +24,7 @@ import butterknife.ButterKnife;
  * Created by 赖祖宏 on 2017/5/15.
  */
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
     @Bind(R.id.rv_content)
     RecyclerView rvContent;
     List<BookBean> list;
@@ -80,6 +79,15 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case 10:
                         startActivity(new Intent(HomeActivity.this,HotFixActivity.class));
+                        break;
+                    case 11:
+                        startActivity(new Intent(HomeActivity.this,AppBarLayoutActivity.class));
+                        break;
+                    case 12:
+                        startActivity(new Intent(HomeActivity.this,ColorStatusBarActivity.class));
+                        break;
+                    case 13:
+                        startActivity(new Intent(HomeActivity.this,TopViewActivity.class));
                         break;
                     default:
                         adapter.notifyItemRemoved(position);

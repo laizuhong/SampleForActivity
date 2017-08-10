@@ -106,7 +106,7 @@ dependencies {
     })
     compile project(':library')
     compile project(':BottomNavigationViewLibrary')
-    compile project(':ToolbarLibrary')
+//    compile project(':ToolbarLibrary')
 
     // 多dex配置
     //注释掉原有bugly的仓库

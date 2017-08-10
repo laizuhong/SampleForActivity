@@ -1,13 +1,12 @@
 package com.example.sample.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.sample.R;
 
-public class HotFixActivity extends AppCompatActivity {
+public class HotFixActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

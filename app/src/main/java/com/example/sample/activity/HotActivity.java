@@ -1,6 +1,5 @@
 package com.example.sample.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -8,7 +7,7 @@ import android.widget.Toast;
 
 import com.example.sample.R;
 
-public class HotActivity extends AppCompatActivity {
+public class HotActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -29,10 +29,10 @@ public class DateUtils {
         list.add(new BookBean("FinestWebView","234"));
         list.add(new BookBean("VideoActivity","234"));
         list.add(new BookBean("UuidActivity","234"));
-        list.add(new BookBean("assxxcvdgdf","234"));
-        list.add(new BookBean("asdf","234"));
-        list.add(new BookBean("asfgcbdf","234"));
-        list.add(new BookBean("asgdfdf","234"));
+        list.add(new BookBean("HotFixActivity","234"));
+        list.add(new BookBean("AppBarLayoutActivity","234"));
+        list.add(new BookBean("ColorStatusBarActivity","234"));
+        list.add(new BookBean("TopViewActivity","234"));
         list.add(new BookBean("adfsdf","234"));
         list.add(new BookBean("ascvdfbdf","234"));
         list.add(new BookBean("ascvbdf","234"));

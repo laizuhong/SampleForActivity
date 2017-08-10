@@ -24,4 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hot_text4"/>
+
+    <com.example.sample.view.TopicNameView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
