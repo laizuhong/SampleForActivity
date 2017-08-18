@@ -19,6 +19,7 @@ public class DateUtils {
     public static List<BookBean> getDate(){
 
         List<BookBean> list=new ArrayList<>();
+        list.add(new BookBean("MoreFragmentActivity","234"));
         list.add(new BookBean("TabLayoutActivity","234"));
         list.add(new BookBean("TabHostActivity","234"));
         list.add(new BookBean("ViewPagerActivity","234"));

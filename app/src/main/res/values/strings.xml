@@ -74,4 +74,7 @@
     <string name="hot_text2">button</string>
     <string name="hot_text3">这是个textView</string>
     <string name="hot_text4">这是个button</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

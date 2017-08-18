@@ -4,5 +4,5 @@
     <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#ffffff</color>
     <color name="tranla">#50000000</color>
-
+    <color name="main_icon_red">#ff5038</color><!--主icon风格色调-->
 </resources>
