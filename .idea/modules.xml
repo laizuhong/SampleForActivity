@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BottomNavigationViewLibrary/BottomNavigationViewLibrary.iml" filepath="$PROJECT_DIR$/BottomNavigationViewLibrary/BottomNavigationViewLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Sample.iml" filepath="$PROJECT_DIR$/Sample.iml" />
+      <module fileurl="file://D:\work\SampleForActivity\Sample.iml" filepath="D:\work\SampleForActivity\Sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/SampleForActivity.iml" filepath="$PROJECT_DIR$/SampleForActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/ijkplayer-arm64/ijkplayer-arm64.iml" filepath="$PROJECT_DIR$/ijkplayer-arm64/ijkplayer-arm64.iml" />

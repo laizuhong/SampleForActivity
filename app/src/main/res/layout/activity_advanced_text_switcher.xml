@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sample.activity.AdvancedTextSwitcherActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView1"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView2"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView3"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView4"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView5"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView6"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView7"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+          <com.example.sample.view.AutoScrollView
+              android:id="@+id/autoView8"
+              android:layout_width="match_parent"
+              android:layout_height="120dp">
+
+          </com.example.sample.view.AutoScrollView>
+      </LinearLayout>
+  </ScrollView>
+</LinearLayout>

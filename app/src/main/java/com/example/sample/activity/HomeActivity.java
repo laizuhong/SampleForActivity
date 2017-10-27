@@ -2,6 +2,7 @@ package com.example.sample.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
@@ -16,8 +17,10 @@ import com.example.sample.R;
 import com.example.sample.adapter.MainAdapter;
 import com.example.sample.bean.BookBean;
 import com.example.sample.util.DateUtils;
+import com.example.sample.util.SpeedyLinearLayoutManager;
 import com.thefinestartist.finestwebview.FinestWebView;
 
+import java.io.File;
 import java.util.List;
 
 import butterknife.Bind;
@@ -47,8 +50,14 @@ public class HomeActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         list = DateUtils.getDate();
         adapter = new MainAdapter(list);
-        rvContent.setLayoutManager(new LinearLayoutManager(this));
+
+
+        rvContent.setLayoutManager(new SpeedyLinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         rvContent.setAdapter(adapter);
+
+
+//        new SwitcherRecycler(rvContent,2000,adapter).start();
+
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
@@ -99,6 +108,21 @@ public class HomeActivity extends BaseActivity {
                     case 13:
                         startActivity(new Intent(HomeActivity.this, TopViewActivity.class));
                         break;
+                    case 14:
+                        startActivity(new Intent(HomeActivity.this, BottomActivity.class));
+                        break;
+                    case 15:
+                        startActivity(Intent.createChooser(getPdfFileIntent("/storage/emulated/0/Java并发编程实战 (1).pdf"), "Open pdf file"));
+                        break;
+                    case 16:
+                        startActivity(new Intent(HomeActivity.this,AdvancedTextSwitcherActivity.class));
+                        break;
+                    case 17:
+                        startActivity(new Intent(HomeActivity.this,AutoScrollActivity.class));
+                        break;
+                    case 18:
+                        startActivity(new Intent(HomeActivity.this,RecyclerActivity.class));
+                        break;
                     default:
                         adapter.notifyItemRemoved(position);
                         adapter.notifyItemRangeChanged(position, adapter.getData().size() - position);
@@ -129,5 +153,16 @@ public class HomeActivity extends BaseActivity {
         addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, icon);// 快捷方式的图标
         addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, myIntent);// 快捷方式的动作
         context.sendBroadcast(addIntent);
+    }
+
+    //Android获取一个用于打开PDF文件的intent
+    public Intent getPdfFileIntent( String path ){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        i.addCategory(Intent.CATEGORY_DEFAULT);
+//        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
+        Uri uri = Uri.fromFile(new File(path));
+        i.setDataAndType(uri, "application/pdf");
+        return i;
     }
 }

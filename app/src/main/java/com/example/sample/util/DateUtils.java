@@ -34,12 +34,12 @@ public class DateUtils {
         list.add(new BookBean("AppBarLayoutActivity","234"));
         list.add(new BookBean("ColorStatusBarActivity","234"));
         list.add(new BookBean("TopViewActivity","234"));
-        list.add(new BookBean("adfsdf","234"));
-        list.add(new BookBean("ascvdfbdf","234"));
-        list.add(new BookBean("ascvbdf","234"));
-        list.add(new BookBean("asvbddf","234"));
-        list.add(new BookBean("ascvbndf","234"));
-        list.add(new BookBean("asxcvdf","234"));
+        list.add(new BookBean("BottomActivity","234"));
+        list.add(new BookBean("pdfview","234"));
+        list.add(new BookBean("AdvancedTextSwitcherActivity","234"));
+        list.add(new BookBean("AutoScrollActivity","234"));
+        list.add(new BookBean("RecyclerActivity","234"));
+        list.add(new BookBean("这是因为这些方法或者类是被Android SD","234"));
         return list;
     }
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+    <sumimakito.android.advtextswitcher.AdvTextSwitcher
+        android:id="@+id/text"
+        android:textColor="#66BCBB"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="visible"
+        app:textSize="32sp"
+        app:gravity="center">
+
+    </sumimakito.android.advtextswitcher.AdvTextSwitcher>
+
+    <com.example.sample.view.AutoScrollView
+        android:id="@+id/autoView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+    </com.example.sample.view.AutoScrollView>
+</LinearLayout>

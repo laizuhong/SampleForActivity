@@ -14,10 +14,10 @@ import java.util.List;
  * Created by 赖祖宏 on 2017/5/15.
  */
 
-public class MainAdapter extends BaseQuickAdapter<BookBean,BaseViewHolder>{
+public class Main2Adapter extends BaseQuickAdapter<BookBean,BaseViewHolder>{
 
 
-    public MainAdapter(@Nullable List<BookBean> data) {
+    public Main2Adapter(@Nullable List<BookBean> data) {
         super(R.layout.item_view, data);
     }
 
