@@ -15,10 +15,10 @@
 
     </sumimakito.android.advtextswitcher.AdvTextSwitcher>
 
-    <com.example.sample.view.AutoScrollView
-        android:id="@+id/autoView"
-        android:layout_width="match_parent"
-        android:layout_height="120dp">
+    <!--<com.example.sample.view.AutoScrollView-->
+        <!--android:id="@+id/autoView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp">-->
 
-    </com.example.sample.view.AutoScrollView>
+    <!--</com.example.sample.view.AutoScrollView>-->
 </LinearLayout>

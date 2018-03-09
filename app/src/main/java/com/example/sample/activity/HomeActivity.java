@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -28,6 +29,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
+ *
  * Created by 赖祖宏 on 2017/5/15.
  */
 
@@ -52,6 +54,7 @@ public class HomeActivity extends BaseActivity {
         adapter = new MainAdapter(list);
 
 
+        rvContent.addItemDecoration(new DividerItemDecoration(this,LinearLayoutManager.VERTICAL));
         rvContent.setLayoutManager(new SpeedyLinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         rvContent.setAdapter(adapter);
 
@@ -122,6 +125,15 @@ public class HomeActivity extends BaseActivity {
                         break;
                     case 18:
                         startActivity(new Intent(HomeActivity.this,RecyclerActivity.class));
+                        break;
+                    case 19:
+                        startActivity(new Intent(HomeActivity.this,TextActivity.class));
+                        break;
+                    case 20:
+                        startActivity(new Intent(HomeActivity.this,StockActivity.class));
+                        break;
+                    case 21:
+                        startActivity(new Intent(HomeActivity.this,SchoolActivity.class));
                         break;
                     default:
                         adapter.notifyItemRemoved(position);

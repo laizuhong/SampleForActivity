@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import com.example.sample.bean.BookBean;
 import com.example.sample.fragment.MainFragment;
 import com.example.sample.fragment.TabLayoutFragment;
-import com.example.sample.fragment.TableFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +18,7 @@ public class DateUtils {
     public static List<BookBean> getDate(){
 
         List<BookBean> list=new ArrayList<>();
-        list.add(new BookBean("MoreFragmentActivity","234"));
+        list.add(new BookBean("MoreFragmentActivity","789"));
         list.add(new BookBean("TabLayoutActivity","234"));
         list.add(new BookBean("TabHostActivity","234"));
         list.add(new BookBean("ViewPagerActivity","234"));
@@ -39,7 +38,9 @@ public class DateUtils {
         list.add(new BookBean("AdvancedTextSwitcherActivity","234"));
         list.add(new BookBean("AutoScrollActivity","234"));
         list.add(new BookBean("RecyclerActivity","234"));
-        list.add(new BookBean("这是因为这些方法或者类是被Android SD","234"));
+        list.add(new BookBean("TextActivity","234"));
+        list.add(new BookBean("StockActivity","234"));
+        list.add(new BookBean("SchoolActivity","234"));
         return list;
     }
 
@@ -51,13 +52,13 @@ public class DateUtils {
         }
         return fragments;
     }
-    public static List<Fragment> getTableFragments(int count){
-        List<Fragment> fragments=new ArrayList<>();
-        for (int i = 0; i < count; i++) {
-            fragments.add(new TableFragment());
-        }
-        return fragments;
-    }
+//    public static List<Fragment> getTableFragments(int count){
+//        List<Fragment> fragments=new ArrayList<>();
+//        for (int i = 0; i < count; i++) {
+//            fragments.add(new TableFragment());
+//        }
+//        return fragments;
+//    }
 
     public static List<Fragment> getTabLayoutFragments(int count){
         List<Fragment> fragments=new ArrayList<>();

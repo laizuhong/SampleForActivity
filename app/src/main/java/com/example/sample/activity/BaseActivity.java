@@ -1,16 +1,14 @@
 package com.example.sample.activity;
 
+
 import android.support.v7.app.AppCompatActivity;
-
-import com.example.sample.util.StatusBarUtil;
-
 
 /**
  *
  * Created by 赖祖宏 on 2017/5/15.
  */
 
-public class BaseActivity extends AppCompatActivity{
+public class BaseActivity extends AppCompatActivity {
 
     @Override
     public void setContentView(int layoutResID) {
@@ -34,7 +32,7 @@ public class BaseActivity extends AppCompatActivity{
 //        StatusBarUtil.StatusBarLightMode(this);
 
 
-        StatusBarUtil.StatusBarLightMode(this);
+//        StatusBarUtil.StatusBarLightMode(this);
     }
 
 

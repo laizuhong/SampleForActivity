@@ -4,15 +4,20 @@ import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.support.multidex.MultiDex;
 import android.widget.Toast;
 
+import com.example.sample.dao.DaoMaster;
+import com.example.sample.dao.DaoSession;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.interfaces.BetaPatchListener;
 import com.tencent.bugly.beta.tinker.TinkerManager;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
+
+import org.greenrobot.greendao.identityscope.IdentityScopeType;
 
 import java.util.Locale;
 
@@ -109,6 +114,9 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         Bugly.setIsDevelopmentDevice(getApplication(), true);
         // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
         Bugly.init(getApplication(), "f2721c6d59", true);
+
+
+        setDatabase();
     }
 
 
@@ -129,4 +137,29 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         getApplication().registerActivityLifecycleCallbacks(callbacks);
     }
 
+    private SQLiteDatabase db;
+    private DaoSession session;
+
+    private static String DB_NAME = "sample-db";
+
+    private void setDatabase() {
+        // 通过 DaoMaster 的内部类 DevOpenHelper，你可以得到一个便利的 SQLiteOpenHelper 对象。
+        // 可能你已经注意到了，你并不需要去编写「CREATE TABLE」这样的 SQL 语句，因为 greenDAO 已经帮你做了。
+        // 注意：默认的 DaoMaster.DevOpenHelper 会在数据库升级时，删除所有的表，意味着这将导致数据的丢失。
+        // 所以，在正式的项目中，你还应该做一层封装，来实现数据库的安全升级。
+//        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplication(), DB_NAME);
+        GreenDaoUpdateHelper helper = new GreenDaoUpdateHelper(getApplication(), DB_NAME, null);
+        db = helper.getWritableDatabase();
+        // 注意：该数据库连接属于 DaoMaster，所以多个 Session 指的是相同的数据库连接。
+        DaoMaster master = new DaoMaster(db);
+        session = master.newSession(IdentityScopeType.None);
+    }
+
+    public DaoSession getSession() {
+        return session;
+    }
+
+    public void setSession(DaoSession session) {
+        this.session = session;
+    }
 }

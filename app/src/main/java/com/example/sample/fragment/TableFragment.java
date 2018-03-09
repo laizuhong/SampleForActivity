@@ -4,21 +4,16 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.sample.R;
-import com.example.sample.adapter.MainAdapter;
 import com.example.sample.bean.BookBean;
 import com.example.sample.util.DateUtils;
 
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -26,15 +21,15 @@ import butterknife.ButterKnife;
  */
 
 public class TableFragment extends Fragment {
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+//    @Bind(R.id.toolbar)
+//    Toolbar toolbar;
 
-    @Bind(R.id.recyclerView)
-    RecyclerView recyclerView;
+//    @Bind(R.id.recyclerView)
+//    RecyclerView recyclerView;
 
     List<BookBean> list;
-    MainAdapter adapter;
-    @Bind(R.id.appbar)
+//    MainAdapter adapter;
+//    @Bind(R.id.appbar)
     AppBarLayout appbar;
 
     @Nullable
@@ -44,9 +39,9 @@ public class TableFragment extends Fragment {
         ButterKnife.bind(this, view);
         list = DateUtils.getDate();
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new MainAdapter(list);
-        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+//        adapter = new MainAdapter(list);
+//        recyclerView.setAdapter(adapter);
         return view;
     }
 

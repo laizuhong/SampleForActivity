@@ -95,7 +95,10 @@
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activity.AdvancedTextSwitcherActivity" />
         <activity android:name=".activity.AutoScrollActivity" />
-        <activity android:name=".activity.RecyclerActivity"></activity>
+        <activity android:name=".activity.RecyclerActivity" />
+        <activity android:name=".activity.TextActivity" />
+        <activity android:name=".activity.StockActivity"/>
+        <activity android:name=".activity.SchoolActivity"/>
     </application>
 
 </manifest>

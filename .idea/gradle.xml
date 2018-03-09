@@ -3,21 +3,15 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-all" />
+        <option name="gradleHome" value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-all/7nykk4k6egium8fkyx09av4va/gradle-3.3" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/BottomNavigationViewLibrary" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/ijkplayer-arm64" />
-            <option value="$PROJECT_DIR$/ijkplayer-armv5" />
-            <option value="$PROJECT_DIR$/ijkplayer-armv7a" />
-            <option value="$PROJECT_DIR$/ijkplayer-exo" />
-            <option value="$PROJECT_DIR$/ijkplayer-java" />
-            <option value="$PROJECT_DIR$/ijkplayer-x86" />
-            <option value="$PROJECT_DIR$/ijkplayer-x86_64" />
+            <option value="$PROJECT_DIR$/gsyVideoPlayer" />
             <option value="$PROJECT_DIR$/library" />
           </set>
         </option>

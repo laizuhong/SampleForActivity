@@ -10,31 +10,120 @@
             android:layout_height="wrap_content">
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
+                    app:layout_scrollFlags="scroll|enterAlways"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                 </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
 
-       <RelativeLayout
+       <android.support.v4.widget.NestedScrollView
+           android:id="@+id/scrollView"
            android:layout_width="match_parent"
            app:layout_behavior="@string/appbar_scrolling_view_behavior"
            android:layout_height="match_parent">
-               <android.support.design.widget.BottomNavigationView
-                   android:id="@+id/buttonView"
-                   app:menu="@menu/menu_tabhost"
-                   android:layout_alignParentBottom="true"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content">
 
-               </android.support.design.widget.BottomNavigationView>
                <FrameLayout
                    android:id="@+id/fragment_container"
-                   android:layout_above="@id/buttonView"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent">
 
                </FrameLayout>
-       </RelativeLayout>
+           <!--<android.support.v4.view.ViewPager-->
+               <!--android:id="@+id/viewPager"-->
+               <!--android:layout_width="match_parent"-->
+               <!--android:layout_height="match_parent">-->
 
+           <!--</android.support.v4.view.ViewPager>-->
+       </android.support.v4.widget.NestedScrollView>
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/buttonView"-->
+        <!--app:menu="@menu/menu_tabhost"-->
+        <!--android:background="@color/white"-->
+        <!--app:layout_behavior=".view.BaseBehavior"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <!--</android.support.design.widget.BottomNavigationView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        app:layout_behavior=".view.BaseBehavior"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_ripple"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/icon_home_me_red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="联系人"
+                android:textSize="9.3sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_ripple"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/icon_home_me_red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="联系人"
+                android:textSize="9.3sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_ripple"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/icon_home_me_red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="联系人"
+                android:textSize="9.3sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

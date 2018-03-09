@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@android:color/white"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
+        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.Toolbar
@@ -21,7 +23,7 @@
 
 
 
-       <RelativeLayout
+       <android.support.v4.widget.NestedScrollView
            android:layout_width="match_parent"
            android:orientation="vertical"
            app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -29,24 +31,23 @@
 
 
 
-           <com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView
-               android:id="@+id/navigationView"
-               android:layout_width="match_parent"
-               android:layout_alignParentBottom="true"
-               app:layout_behavior=".view.BaseBehavior"
-               android:layout_height="48dp">
+           <!--<com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView-->
+               <!--android:id="@+id/navigationView"-->
+               <!--android:layout_width="match_parent"-->
+               <!--android:layout_alignParentBottom="true"-->
+               <!--app:layout_behavior=".view.BaseBehavior"-->
+               <!--android:layout_height="48dp">-->
 
-           </com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView>
+           <!--</com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView>-->
            <android.support.v4.view.ViewPager
                android:id="@+id/viewPager"
                android:visibility="visible"
                android:layout_alignParentTop="true"
-               android:layout_above="@id/navigationView"
                android:layout_width="match_parent"
                android:layout_height="match_parent">
 
            </android.support.v4.view.ViewPager>
 
-       </RelativeLayout>
+       </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

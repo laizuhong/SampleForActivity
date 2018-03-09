@@ -75,7 +75,9 @@ public class TabLayoutActivity extends BaseActivity {
 
     @Override
     protected void setStatusBar() {
+
         super.setStatusBar();
+
 //        StatusBarUtil.setTranslucentForImageView(this, collapsingToolbarLayout);
     }
 

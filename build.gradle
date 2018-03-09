@@ -3,9 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:2.3.0'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
 
         // tinkersupport插件(1.0.3以上无须再配置tinker插件）
@@ -17,14 +21,18 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 
 ext {
-    compileSdkVersion = 26
-    buildToolsVersion = "26.0.0"
+    compileSdkVersion = 27
+    buildToolsVersion = "26.0.2"
 
-    targetSdkVersion = 26
+    targetSdkVersion = 27
 
 }
 

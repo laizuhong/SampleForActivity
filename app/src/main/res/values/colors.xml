@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffffff</color>
-    <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorAccent">#ffffff</color>
+    <color name="colorPrimary">#3b4987</color>
+    <color name="colorPrimaryDark">#3b4987</color>
+    <color name="colorAccent">#3b4987</color>
     <color name="tranla">#50000000</color>
     <color name="main_icon_red">#ff5038</color><!--主icon风格色调-->
+
+
+
+    <!--通用背景色-->
+    <color name="common_bg">@color/white</color>
+    <!--通用触摸背景色-->
+    <color name="common_touch_bg">#E3E3E3</color>
+    <!--通用背景色-->
+    <color name="common_gray_bg">#EEEEEE</color>
 </resources>
