@@ -49,7 +49,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensor"
             android:theme="@style/FinestWebViewTheme.Light" />
-        <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.VideoActivity"
+            android:theme="@style/Theme.AppCompat.Full"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
         <activity android:name=".activity.UuidActivity" />
         <activity android:name=".activity.HotUpdateActivity" />
         <activity android:name=".activity.HotFixActivity" />

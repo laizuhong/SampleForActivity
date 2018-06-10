@@ -2,35 +2,32 @@
 
 buildscript {
     repositories {
+        maven { url "https://maven.google.com" }
         jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        maven{url 'https://jitpack.io'}
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
 
         // tinkersupport插件(1.0.3以上无须再配置tinker插件）
-        classpath "com.tencent.bugly:tinker-support:1.0.8"
+//        classpath "com.tencent.bugly:tinker-support:1.0.8"
     }
 }
 
 allprojects {
     repositories {
+        maven { url "https://maven.google.com" }
         jcenter()
         maven { url "https://jitpack.io" }
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+
     }
 }
 
 ext {
     compileSdkVersion = 27
-    buildToolsVersion = "26.0.2"
+    buildToolsVersion = "27.0.3"
 
     targetSdkVersion = 27
 

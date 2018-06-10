@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
-apply from: 'tinker-support.gradle'
+//apply from: 'tinker-support.gradle'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -28,14 +28,12 @@ android {
     // 签名配置
     signingConfigs {
         release {
-            try {
+
                 storeFile file("./keystore/laizuhong.jks")
                 storePassword "laizuhong"
                 keyAlias "key0"
                 keyPassword "laizuhong"
-            } catch (ex) {
-                throw new InvalidUserDataException(ex.toString())
-            }
+
         }
 
         debug {
@@ -60,42 +58,11 @@ android {
         }
     }
 
-//    sourceSets {
-//        main {
-//            java {
-//                srcDir 'src-gen'
-//            }
-//        }
-//        jniLibs.srcDirs = ['libs', 'src/main/jniLibs']
-//    }
-//
-//    repositories {
-//        flatDir {
-//            dirs 'libs'
-//        }
-//    }
-
-//    // 多渠道配置
-//    productFlavors {
-//        qiniu {}//官网
-//        baidu {}//百度手机助手
-//        _360 {}//360手机助手
-//        myapp {}//应用宝
-//        wandoujia {}//豌豆荚
-//        xiaomi {}//小米市场
-//        meizu {}//魅族应用商店
-//        huawei {}//华为应用市场
-//        oppo {}//oppo市场
-//        other {}//其他
-//        tx_inteli_ad {}//腾讯智慧推
-//        daily_hot {} //今日头条
-//     }
 
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
     }
-
 
 }
 
@@ -114,13 +81,21 @@ dependencies {
     })
     compile project(':library')
     compile project(':BottomNavigationViewLibrary')
+
     //    compile project(':ToolbarLibrary')
+
     // 多dex配置
+
     //注释掉原有bugly的仓库
+
     //compile 'com.tencent.bugly:crashreport:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.3.2
+
     //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
     //    compile 'com.qiniu:qiniu-android-sdk:7.3.+'
+
     //    compile 'com.qiniu:happy-dns:0.2.8'
+
     //    compile 'com.qiniu.pili:pili-android-qos:0.8.18'
     compile 'com.android.support:appcompat-v7:27.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -138,16 +113,36 @@ dependencies {
     compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
     compile 'com.github.SumiMakito:AdvancedTextSwitcher:0.3'
     testCompile 'junit:junit:4.12'
-    //    compile project(':ijkplayer-arm64')
-    //    compile project(':ijkplayer-armv5')
-    //    compile project(':ijkplayer-armv7a')
-    //    compile project(':ijkplayer-exo')
-    //    compile project(':ijkplayer-java')
-    //    compile project(':ijkplayer-x86')
-    //    compile project(':ijkplayer-x86_64')
-    compile files('libs/butterknife-7.0.1.jar')
 
+    //    compile project(':ijkplayer-arm64')
+
+    //    compile project(':ijkplayer-armv5')
+
+    //    compile project(':ijkplayer-armv7a')
+
+    //    compile project(':ijkplayer-exo')
+
+    //    compile project(':ijkplayer-java')
+
+    //    compile project(':ijkplayer-x86')
+
+    //    compile project(':ijkplayer-x86_64')
+    annotationProcessor files('libs/butterknife-7.0.1.jar')
     compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.4.0'
 
-    compile 'com.shuyu:GSYVideoPlayer:3.0.0'
+    //完整版引入
+    compile 'com.shuyu:GSYVideoPlayer:5.0.0-beta'
+
+    //    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+
+    //    compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
+
+    //
+
+    ////    # Other ABIs: optional
+
+    //    compile 'com.github.ctiao:ndkbitmap-armv5:0.9.21'
+
+    //    compile 'com.github.ctiao:ndkbitmap-x86:0.9.21'
+    compile project(':DanmakuFlameMaster')
 }
