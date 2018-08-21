@@ -21,12 +21,15 @@ public class AutoScrollActivity extends AppCompatActivity {
     @Bind(R.id.mine)
     MineScrollView mine;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_scroll);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
+
     }
 
     @OnClick(R.id.btn)
