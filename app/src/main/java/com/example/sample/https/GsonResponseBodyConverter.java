@@ -31,8 +31,8 @@ class GsonResponseBodyConverter<T> implements Converter<ResponseBody, T> {
 //        LogUtils.e(response);
         try {
             JSONObject jsonObject=new JSONObject(response);
-            if (jsonObject.getString("result").equals("")){
-                jsonObject.put("result",null);
+            if (jsonObject.getString("data").equals("")){
+                jsonObject.put("data",null);
                 response=jsonObject.toString();
             }
         } catch (JSONException e) {

@@ -1,5 +1,14 @@
 package com.example.sample.https;
 
+import com.example.sample.bean.DataBean;
+import com.example.sample.bean.HttpResult;
+
+import java.util.List;
+
+import retrofit2.http.GET;
+import retrofit2.http.Query;
+import rx.Observable;
+
 /**
  *
  * Created by 赖祖宏 on 2018/3/21.
@@ -7,6 +16,8 @@ package com.example.sample.https;
 
 public interface AccountService {
 
+    @GET("query")
+    Observable<HttpResult<List<DataBean>>> get(@Query("type") String type, @Query("postid")String postId);
 //    @FormUrlEncoded
 //    @POST("login/enter")
 //    Observable<HttpResult<LoginResult>> login(@FieldMap Map<String, String> map);

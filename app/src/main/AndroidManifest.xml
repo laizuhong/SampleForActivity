@@ -49,10 +49,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensor"
             android:theme="@style/FinestWebViewTheme.Light" />
-        <activity android:name=".activity.VideoActivity"
-            android:theme="@style/Theme.AppCompat.Full"
+        <activity
+            android:name=".activity.VideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Full" />
         <activity android:name=".activity.UuidActivity" />
         <activity android:name=".activity.HotUpdateActivity" />
         <activity android:name=".activity.HotFixActivity" />
@@ -100,8 +101,14 @@
         <activity android:name=".activity.AutoScrollActivity" />
         <activity android:name=".activity.RecyclerActivity" />
         <activity android:name=".activity.TextActivity" />
-        <activity android:name=".activity.StockActivity"/>
-        <activity android:name=".activity.SchoolActivity"/>
+        <activity android:name=".activity.StockActivity" />
+        <activity android:name=".activity.SchoolActivity" />
+        <activity android:name=".activity.ShadowViewActivity" />
+        <activity android:name=".activity.MatrixActivity" />
+        <activity android:name=".activity.GreenDao2Activity" />
+        <activity android:name=".activity.ShadowActivity" />
+        <activity android:name=".activity.FinalDbActivity"></activity>
+        <activity android:name=".activity.ScrollBarActivity"/>
     </application>
 
 </manifest>

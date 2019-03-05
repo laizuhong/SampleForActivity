@@ -1,8 +1,11 @@
 package com.example.sample.https;
 
 
+import com.example.sample.bean.DataBean;
+
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +16,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import rx.Observable;
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
@@ -21,7 +23,8 @@ import rx.schedulers.Schedulers;
  */
 public class HttpMethods {
 
-    private static final String BASE_URL = "http://192.168.7.86:8080/";
+//    private static final String BASE_URL = "http://192.168.7.86:8080/";
+private static final String BASE_URL = "http://www.kuaidi100.com/";
 
     private static final int DEFAULT_TIMEOUT = 5;
 
@@ -57,8 +60,12 @@ public class HttpMethods {
 //                return null;
 //            }
 //        });
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         builder.addInterceptor(new AddCookiesInterceptor()) //这部分
-                .addInterceptor(new ReceivedCookiesInterceptor());//这部分
+                .addInterceptor(new ReceivedCookiesInterceptor())
+                .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
 
         retrofit = new Retrofit.Builder()
                 .client(builder.build())
@@ -100,9 +107,8 @@ public class HttpMethods {
 
     private <T> void toSubscribe(Observable<T> o, Subscriber<T> s) {
 
-        o.subscribeOn(Schedulers.io())
+        o.subscribeOn(Schedulers.computation())
                 .unsubscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .onErrorResumeNext(new HttpResponseFunc<T>())
                 .subscribe(s);
     }
@@ -112,6 +118,13 @@ public class HttpMethods {
 //        map.put("imei", DeviceUtils.getDeviceId());
 //        map.put("timestamp", new Date().getTime() + "");
         return map;
+    }
+
+
+    public void get(Subscriber<List<DataBean>> subscriber){
+        Observable<List<DataBean>> observable=accountService.get("shentong","3384743553914")
+                .map(new HttpResultFunc<List<DataBean>>());
+        toSubscribe(observable,subscriber);
     }
 
 //

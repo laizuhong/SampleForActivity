@@ -14,4 +14,6 @@
     <color name="common_touch_bg">#E3E3E3</color>
     <!--通用背景色-->
     <color name="common_gray_bg">#EEEEEE</color>
+
+    <color name="shadow">#62d0b7</color>
 </resources>
